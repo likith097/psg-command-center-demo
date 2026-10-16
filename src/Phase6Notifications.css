@@ -1,0 +1,229 @@
+
+.psg-notifications {
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 25;
+}
+
+.psg-notification-trigger {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: #68788a;
+  cursor: pointer;
+}
+
+.psg-notification-trigger:hover {
+  background: #edf5ff;
+  color: #1769c4;
+}
+
+.psg-notification-count {
+  position: absolute;
+  top: -4px;
+  right: -5px;
+  min-width: 19px;
+  height: 19px;
+  padding: 0 4px;
+  display: grid;
+  place-items: center;
+  background: #e34f58;
+  color: white;
+  border: 2px solid white;
+  border-radius: 20px;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.psg-notification-panel {
+  position: absolute;
+  top: calc(100% + 14px);
+  right: -45px;
+  width: min(410px, calc(100vw - 28px));
+  max-height: min(610px, calc(100vh - 110px));
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 1px solid #e4ebf3;
+  border-radius: 15px;
+  box-shadow: 0 18px 55px rgba(20, 45, 75, 0.18);
+  overflow: hidden;
+  color: #18283c;
+}
+
+.psg-notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 20px;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.psg-notification-header h3 {
+  margin: 0 0 5px;
+  font-size: 16px;
+  color: #18283c;
+}
+
+.psg-notification-header p {
+  margin: 0;
+  color: #8997a7;
+  font-size: 11px;
+}
+
+.psg-notification-close {
+  border: 0;
+  background: transparent;
+  color: #8190a1;
+  cursor: pointer;
+}
+
+.psg-notification-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 15px 20px;
+  background: #f8fbff;
+}
+
+.psg-notification-summary > div {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 12px;
+  background: white;
+  border: 1px solid #e8edf4;
+  border-radius: 9px;
+  color: #6c7f93;
+  font-size: 11px;
+}
+
+.psg-notification-summary strong {
+  color: #203b57;
+  font-size: 18px;
+}
+
+.psg-notification-summary > div:last-child svg {
+  color: #d88932;
+}
+
+.psg-notification-list {
+  overflow-y: auto;
+  min-height: 100px;
+}
+
+.psg-notification-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 17px 20px;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.psg-notification-icon {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+}
+
+.psg-notification-icon.high {
+  background: #fff0e8;
+  color: #d87535;
+}
+
+.psg-notification-icon.medium {
+  background: #eaf3ff;
+  color: #2878ca;
+}
+
+.psg-notification-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.psg-notification-details > strong {
+  display: block;
+  color: #293b50;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.psg-notification-details p {
+  margin: 5px 0 10px;
+  color: #8391a2;
+  font-size: 11px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.psg-notification-actions {
+  display: flex;
+  gap: 14px;
+}
+
+.psg-notification-actions button,
+.psg-notification-footer button {
+  border: 0;
+  background: transparent;
+  color: #2375c7;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+}
+
+.psg-notification-actions button:last-child {
+  color: #8997a7;
+}
+
+.psg-notification-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 42px 20px;
+  text-align: center;
+  color: #35a06b;
+}
+
+.psg-notification-empty strong {
+  color: #293b50;
+  font-size: 14px;
+}
+
+.psg-notification-empty p {
+  margin: 0;
+  color: #8997a7;
+  font-size: 12px;
+}
+
+.psg-notification-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 14px 20px;
+  background: #fafbfd;
+  border-top: 1px solid #edf0f5;
+}
+
+.psg-notification-footer span {
+  color: #99a5b2;
+  font-size: 10px;
+}
+
+@media (max-width: 540px) {
+  .psg-notification-panel {
+    right: -45px;
+  }
+}
